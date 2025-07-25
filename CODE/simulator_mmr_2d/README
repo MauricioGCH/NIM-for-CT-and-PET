@@ -1,0 +1,4 @@
+# Pour compiler, simplement 'make'
+# Dans le dossier simu, il y a un exemple de simulation avec un script rempli d'explications.
+# Dans le dossier scanner, ce sont les fichiers du scanner MMR2D pour castor, qu'il faut mettre dans le dossier config/scanner de castor.
+

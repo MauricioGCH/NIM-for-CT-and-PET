@@ -1,0 +1,16 @@
+==================================================================================================
+                                      COMMAND LINE CONTEXT
+==================================================================================================
+SMmaker.exe -m vision600 -o test_vision -p 4Younes-00-sino.s.hdr -r smoothed_rand_00.h33 -s scatter_estim2d_00.h33 -n 4Younes-norm.n.hdr -A acf_00.a -c cmap_testv/cmap_testvision.ecm -castor -v 2 
+Date of execution (since Epoch): 1681314056
+Code precision in bytes: 4
+==================================================================================================
+oSinoModeCreation::Constructor() -> Construct
+oScanner::Constructor() -> Construct
+oScanner::Initialize() ...
+  --> Total number of crystals: 60800  [760;80]
+oSinoModeCreation::InitInputFile() -> Initialize input file(s)
+oSinoModeCreation::InitPrompt() -> Initialize prompt sinogram from file '4Younes-00-sino.s.hdr'
+***** oSinoModeCreation::InitPrompt() -> Input prompt sinogram header '4Younes-00-sino.s.hdr' is missing or corrupted !
+***** oSinoModeCreation::InitInputFiles() -> An error occured while initalizing prompts !
+***** Error while initializing input sinograms !
