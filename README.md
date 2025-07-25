@@ -30,7 +30,7 @@ Additionally, we included a PDF of our email exchange with the author, which may
     - PET denoising.ipynb for PET denoising.
     - The other noteboooks in "Supplementary/Extra notebooks" are individual tests we did to to experiment more freely. You can look at them if you want, but they wont help a lot.
 
-- For are first approach to the PET reconstruction task, the corresponding code is in the "CODE YOUNES" folder, into data, into phantome_after_augmentation, the notebook called "code_rec_TEP.ipynb".
+- For are first approach to the PET reconstruction task, the corresponding code is in the "CODE" folder, into data, into phantome_after_augmentation, the notebook called "code_rec_TEP.ipynb".
     - The simulator_mmr_2d folder contains the algorithm to generate the data.
 
 ## Authors
