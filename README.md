@@ -4,15 +4,17 @@
 - Currently only the Reconstruction task in PET images doesn't work. 
 - For all the other 3 cases the scripts work.
 
-The problem with Reconstruction in PET is that the projection is need will the output of the model is still attach, an as such, a library that did that projection while the output was an attach tensor to the model was needed. parallelproj has that capability (Only compatibel with Unix systems, we used the Oracle VM with Ubuntu 22.04 setting 16gb of RAM)
+The main challenge with reconstruction in PET is that projection operations are required, but the output of the model must remain attached (i.e., connected to the computation graph) for gradients to flow properly during training. Therefore, we needed a library capable of performing projection while keeping the model output as an attached tensor.
 
-If detached from the model, it would lose its gradient and no learning was possible. We weren't able to explore the totality of the library nor understand alls of its functionalities, but the authors have several resources to help undestarnd it.
+We used Parallelproj for this purpose, as it supports differentiable projection operations. Note, however, that Parallelproj is only compatible with Unix-based systems — we used Oracle VM running Ubuntu 22.04 with 16 GB of RAM for our setup.
 
-They recommend to have a look at the 2023 MIC shortcourse that they gave. Specifically at the “forward and back projection” with custom linear operator (e.g. parallelproj projectors) as defined here:
+If the model output were detached, gradients would be lost and no learning would be possible.
 
- https://github.com/gschramm/2023-MIC-ImageRecon-Shortcourse/blob/main/layers.py
+We were not able to fully explore the library or understand all of its functionalities, but the authors provide several helpful resources. They specifically recommend reviewing the 2023 MIC short course they presented. One useful reference is the section on “forward and back projection” with custom linear operators (such as Parallelproj projectors), defined here:
 
-(I also added a pdf of our exchange, it might be helpful. It's called "Email to Georg_1.pdf" in the "Presentations, Docs and Results folder")
+🔗 https://github.com/gschramm/2023-MIC-ImageRecon-Shortcourse/blob/main/layers.py
+
+Additionally, we included a PDF of our email exchange with the author, which may be helpful. It’s titled "Email to Georg_1.pdf" and can be found in the "Presentations, Docs and Results" folder.
 
 ## Documentation
 
